@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Hacker Guide</title>
+  <meta name="description" content="Freetail's Hacker Guide">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
+    <script src="scripts.js"></script>
+    <div class="wrapper">
+        <div class="sidebar">
+            <h2>Ultimate Hackathon Guide</h2>
+            <ul>
+                <li><a href="authentication.html"></i>Authentication</a></li>
+                <li><a href="cloud.html"></i>Cloud</a></li>
+                <li><a href="comp-vis.html"></i>Computer Vision</a></li>
+                <li><a href="database.html"></i>Database</a></li>
+                <li><a href="design-ui.html"></i>Design UI</a></li>
+                <li><a href="github.html"></i>Guthub</a></li>
+                <li><a href="hackathon-logistics.html"></i>Hackathon Logistics</a></li>
+                <li><a href="ideation.html"></i>Ideation</a></li>
+                <li><a href="machine-learning.html"></i>Machine Learning</a></li>
+                <li><a href="mobile-apps.html"></i>Mobile App</a></li>
+                <li><a href="post-hackathon.html"></i>Post Hackathon</a></li>
+                <li><a href="submission.html"></i>Submission and pitching</a></li>
+                <li><a href="terminal.html"></i>Terminal</a></li>
+                <li><a href="web-dev.html"></i>Web Development</a></li>
+            </ul> 
+        </div>
+        <div class="main_content">
+            <p><img src="https://imgs.xkcd.com/comics/git.png" alt="XKCD Git Comic" title="source: xkcd.com"></p>
+            <h2 id="what-is-github-">What is Github?</h2>
+                <p><strong>Git</strong> is a distributed version-control system created by Linux Torvalds (creator of the Linux OS). <strong>GitHub</strong> is a company headquartered in San Francisco, CA that provides end-to-end git hosting. Knowing the difference between these two isn&#39;t integral, but might help you google stuff better. </p>
+                <p>Programmers use Git to store multiple versions of their code (hence the name Version Control System (VCS)). Github is the most popular platform to host these revisions. In fact, you&#39;re looking at this code on a Github repository right now! Github will allow you to share your code, collaborate with other developers and test certain aspects of your codebase! There are competitors to Github out there (like Bitbucket), but since I haven&#39;t used them, I won&#39;t comment on their functionality/usefulness. For hackathon purposes, Github can be really useful for collaborating with teammates and making sure changes don&#39;t get lost.</p>
+            <h2 id="how-is-github-organized-">How is Github organized?</h2>
+                <p>Your code lives in this object called a <strong>repository</strong> (repo). Within that repository, you can have branches, issues, pull requests and a LOT more. Don&#39;t get overwhelmed though, for a hackathon you don&#39;t need to use all these features. Just follow along with this guide, and we&#39;ll have you and your team up and running in no time. </p>
+            <h2 id="how-do-i-set-it-up-on-my-computer-">How do I set it up on my computer?</h2>
+                <p>Quick side note: <a href="https://help.github.com/en/github/getting-started-with-github/set-up-git">This official tutorial</a> is pretty good at explaining how to use certain features of Github. However, I didn&#39;t really think it was very useful when I was a beginner. I&#39;ll do my best to break down essential steps in this guide, but refer to the tutorial to see specific buttons to click on. </p>
+                <p>First of all, register for an account on the <a href="github.com">website</a>. Next, if you are a new to git, I&#39;d recommend downloading the desktop version of github just to help you get everything on a GUI (Graphical User Interface). As you get more advanced, you might find yourself ditching the GUI all together in favor of the terminal/command line, but we don&#39;t need to worry about that yet. </p>
+                <p>Once you have Github Desktop installed, we can get started. Create a repository on the website (github.com) when you&#39;re logged in. Once you have created it, you should <strong>clone</strong> it to your computer using the Github desktop program. <strong>Clone</strong> means to copy the code exactly as it is on the Github server to your local computer. Once you clone it, you should be able to navigate back to it on your computer and make changes locally. </p>
+                <p>Go ahead and add a file. It doesn&#39;t have to be code, Github supports uploading almost any type of file (.pdf, .py, .o, etc.). Once you have added a file to the repository folder, navigate back to Github Desktop. You need to <strong>commit</strong> your changes. Ideally, you want to commit ever so often when you are working on a project. Think of it like hitting &quot;save&quot; on a word document. That&#39;s not what really happens behind the scenes at all, but its a pretty basic analogy that lets you get past this initial hurdle. You will also have to enter a commit message on the desktop app. This isn&#39;t always required, but usually it helps your teammates know what changes you made. This might also come in handy if (or when) you accidentally save a bug, and need to <strong>revert</strong> back to an older version. Check out the &quot;Where can I learn more?&quot; section for a couple resources for this.</p>
+                <p>Once you have committed your changes, you should <strong>push</strong> them. <strong>Pushing</strong> is when you send the local changes you have made on your computer to the remote git repository. Remember this order - first you <strong>commit</strong>, then you <strong>push</strong>.</p>
+                <p>You&#39;re done! You just made a file, committed it, and pushed it to the remote repository. If you refresh the browser page that holds your online repo, you should see the file you made along with your unique commit message. </p>
+            <h2 id="how-does-my-team-work-together-">How does my team work together?</h2>
+                <p>This is a little bit of an advanced topic, but its integral if you are working on a team. The obvious flaw with the method I described earlier is if multiple people attempt to push conflicting changes to the same repository at the same time. <strong>Branches</strong> solve this problem in a pretty elegant way. To understand them way better than I could ever explain, read <a href="https://codesource.io/understanding-branching-in-git/">this</a>. </p>
+                <p>For my teams, we have one repo and everyone is added on as a <a href="https://help.github.com/en/github/setting-up-and-managing-your-github-user-account/inviting-collaborators-to-a-personal-repository">collaborator</a>. Next, we have everyone make their own branch and we keep the <strong>master</strong> branch separate. This makes sure no one pushes untested code directly to our current product. Everyone pushes their changes to their own branch (as detailed above), and then makes a <strong>pull request</strong> to master. To learn how to do this, follow <a href="https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request">this</a>. This way, everyone can review the proposed changes before <strong>merging</strong> (combining) the changes with the main master branch. </p>
+                <p>Remember to <strong>pull</strong> changes from the remote branch to your local copy whenever your teammate makes a change. The pull command pretty much just copies whatever changes have been made on the remote branch you are pulling from, onto your local device. This ensures that everyone has the most up to date version of the code, and no one is working on an already solved bug or code someone else has changed. </p>
+            <h2 id="how-to-setup-a-git-repo">How to setup a git repo</h2>
+                <ol>
+                    <li>Create remote repo</li>
+                    <li>Create local repo w/ the same name as remote repo</li>
+                    <li>Open terminal</li>
+                    <li>$ cd <PATH TO LOCAL REPO></li>
+                    <li>$ touch README.md</li>
+                    <li>$ git init</li>
+                    <li>$ git add .</li>
+                    <li>$ git commit - m &quot;initial commit&quot;</li>
+                    <li>$ git remote add origin <REMOTE REPO></li>
+                    <li>$ git push -u -f origin master</li>
+                    <li>$ git pull</li>
+                </ol>
+            <h2 id="how-to-continuously-integrate-your-work-with-the-remote-branch-on-github">How to continuously integrate your work with the remote branch on Github</h2>
+                <ol>
+                    <li>$ git add <file name></li>
+                    <li>$ git commit -m &quot;detailed commit message here&quot;</li>
+                    <li>$ git push</li>
+                </ol>
+            <h2 id="what-are-merge-conflicts-and-how-do-i-fix-them-">What are &quot;Merge Conflicts&quot; and how do I fix them?</h2>
+                <p>First of all, take a deep breath. While merge conflicts may look complex, they&#39;re actually caused by a pretty simple reason. This is when your teammate and you both push conflicting changes to the same branch. A couple cases:
+                (You are &quot;you&quot; and your teammate is A)</p>
+                <ol>
+                    <li><p>Both of you are working on the master branch. There is a file - app.py - already checked into github. A changes function foo() in app.py, and pushs this change to the remote master branch (seen on your browser). However, you don&#39;t realize they pushed this change (aka you don&#39;t <strong>pull</strong> their changes), and delete function foo(). When you attempt to push your change, the Github server will spit out a &quot;merge conflict....&quot; error.</p>
+                    </li>
+                    <li><p>Both of you are using pull requests and merge requests (like real hackers). However, if A merges a change to foo(), and then you attempt to merge a pull request where you delete foo(), you will once again see a merge conflict. </p>
+                </li>
+                </ol>
+                <p>It&#39;s a lot easier to fix merge conflicts if you&#39;re using a git-integrated IDE. Luckily for you, most modern IDE&#39;s are integrated with git, and you can also get git plugins for vim and emacs (eew). I&#39;m going to let <a href="https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/resolving-a-merge-conflict-on-github">this tutorial</a> explain how to fix merge conflicts in the second case above. </p>
+                <p>However, if you both are working on master, its not so easy to fix. <a href="https://rollout.io/blog/resolve-github-merge-conflicts/">This tutorial</a> does a pretty good job explaining the official ways to fix your merge conflicts. For more complicated needs, I&#39;d recommend asking a mentor at the hackathon or a more experienced hacker near you. Most people I&#39;ve met at hackathons are really friendly, and won&#39;t hesitate to help you out if they can :smiley:</p>
+                <p>Note that this solution is only useful if you&#39;ve made very minor changes to app.py, and you have some basic familiarity with the <a href="https://github.com/kdesai2018/ultimate-hackathon-starting-guide/blob/master/getting-started-terminal/README.md">terminal</a>. If this looks too daunting, your best bet may be to ask a mentor at the hackathon or attempt to follow one of the guides above. </p>
+            <h2 id="where-can-i-learn-more-">Where can I learn more?</h2>
+                <p>This is only the tip of the iceberg when it comes to Git and Github. Once you gain experience and confidence, you&#39;ll find yourself using git functions like rebase, fetch, diff, tag and config. To learn more about these, here are a couple tutorials I&#39;d recommend. </p>
+                <ol>
+                    <li>[Good slideshow for complete beginners] (<a href="https://www.slideshare.net/HubSpot/git-101-git-and-github-for-beginners">https://www.slideshare.net/HubSpot/git-101-git-and-github-for-beginners</a>) and the <a href="https://product.hubspot.com/blog/git-and-github-tutorial-for-beginners">corresponding blog post</a></li>
+                    <li><a href="https://www.atlassian.com/git/tutorials">Pretty comprehensive tutorials on git, but no github specific info</a>. If you&#39;re using github, then these mostly serve to help you learn the theory behind git. </li>
+                    <li>Cool interactive <a href="https://learngitbranching.js.org">tool</a> hosted on....Github! HIGHLY RECOMMENDED for people confused by my rambling tutorial. </li>
+                </ol>
+            <p>Before hopping too deep into any of these though, I&#39;d recommend just going up and asking a mentor/company rep for help. Odds are that they use Github (or another git hosting service) at work, and can probably solve your problem within minutes. This will give you more time to focus on building. Git tends to be one of those things that has a high learning curve so don&#39;t be too distraught if it&#39;s confusing. It&#39;ll come much more naturally as you use it more!</p>
+        </div>
+    </div>
+</body>
+</html>

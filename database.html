@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Hacker Guide</title>
+  <meta name="description" content="Freetail's Hacker Guide">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
+    <script src="scripts.js"></script>
+    <div class="wrapper">
+        <div class="sidebar">
+            <h2>Ultimate Hackathon Guide</h2>
+            <ul>
+                <li><a href="authentication.html"></i>Authentication</a></li>
+                <li><a href="cloud.html"></i>Cloud</a></li>
+                <li><a href="comp-vis.html"></i>Computer Vision</a></li>
+                <li><a href="database.html"></i>Database</a></li>
+                <li><a href="design-ui.html"></i>Design UI</a></li>
+                <li><a href="github.html"></i>Guthub</a></li>
+                <li><a href="hackathon-logistics.html"></i>Hackathon Logistics</a></li>
+                <li><a href="ideation.html"></i>Ideation</a></li>
+                <li><a href="machine-learning.html"></i>Machine Learning</a></li>
+                <li><a href="mobile-apps.html"></i>Mobile App</a></li>
+                <li><a href="post-hackathon.html"></i>Post Hackathon</a></li>
+                <li><a href="submission.html"></i>Submission and pitching</a></li>
+                <li><a href="terminal.html"></i>Terminal</a></li>
+                <li><a href="web-dev.html"></i>Web Development</a></li>
+            </ul> 
+        </div>
+        <div class="main_content">
+            <h1 id="database-sql-firebase-">Database (SQL, Firebase)</h1>
+            <h2 id="introduction">Introduction</h2>
+                <p>Databases are a unique and essential part of the development world. As with many areas of computer science, there are plenty of options for database usage, but they all of the same function. They provide the very essential <strong>storage</strong> service, meaning they allow you to place whatever information you want in huge quantities and a secure location. There are two main types of databases, depending on whether or not they make use of <strong>Standard Query Language</strong>, or <strong>SQL</strong> for short. </p>
+            <h2 id="sql-vs-nosql">SQL vs. NoSQL</h2>
+                <p>SQL databases are the ones that make use of SQL to interact with them, while NoSQL databases usually have some different method of interaction. SQL databases are generally larger and more stable, while NoSQL databases are generally easier to use and more intuitive. Whichever one you use is up to you as well as the kind of app you are making, so choose carefully. This <a href="https://www.thorntech.com/2019/03/sql-vs-nosql/">article</a> is helpful in figuring out which type is the best choice for your application. I&#39;ll go over SQL and NoSQL databases a little more in depth below.</p>
+            <h2 id="sql-databases-and-the-standard-query-language">SQL Databases and the Standard Query Language</h2>
+                <p>As I mentioned earlier, SQL databases are the ones that make use of the standard query language, which is named quite appropriately. It&#39;s the standard for database interaction across the industry, and almost every company will have some sort of SQL storage where it stores user, internal, or external data. As such, SQL itself is important to learn for interacting with a database, and its syntax is famously very different from that of other coding languages. I&#39;ll go over some helpful commands, but you&#39;ll also need to know which environment or database type you&#39;d like to use. They all do effectively the same thing, so I&#39;ve linked some of the most common ones here:</p>
+                <ul>
+                    <li><a href="https://www.mysql.com/">MySQL</a></li>
+                    <li><a href="https://www.postgresql.org/">PostgreSQL</a></li>
+                    <li><a href="https://go.mariadb.com/download-mariadb-server-community.html?utm_source=google&amp;utm_medium=ppc&amp;utm_campaign=MKG-Search-Google-Branded-NA-bd-Server-DL&amp;gclid=CjwKCAjw5Ij2BRBdEiwA0Frc9QzRkkaIZS2Nw8uB_mOvE-4HCa5jifynBtazrux6jLnNEQ74wVCWqBoCyjwQAvD_BwE0">MariaDB</a></li>
+                    <li><a href="https://aws.amazon.com/rds/">Amazon RDS</a></li>
+                </ul>
+            <h3 id="databases-and-tables">Databases and Tables</h3>
+                <p>Whenever you download a SQL database server, you will have access to a number of databases that are hosted on some port within your computer. You are free to create, modify, and delete databases as allowed by your database service, but what you&#39;ll really be interacting with are <strong>tables</strong>. Each database has a number of tables, which you&#39;ll be storing more specific information in. For example, if you wanted to store user profile information for your app, you may have a table called &quot;Users&quot;.</p>
+            <h3 id="general-sql-syntax">General SQL Syntax</h3>
+                <p>SQL statements look like the following line. This is one of the most important SQL commands you&#39;ll use:</p>
+                <pre><code class="lang-SQL"><span class="hljs-keyword">SELECT</span> * <span class="hljs-keyword">FROM</span> <span class="hljs-keyword">Users</span>;
+                </code></pre>
+                <p>SQL statements are often portrayed with caps lock commands, which is what makes them look so distinct. Here, <strong>SELECT</strong> is the command, which tells SQL to return the appropriate data. The <em> tells SQL you&#39;d like to get all attributes, and the <em>*FROM Users</em></em> tells SQL you are pulling from the Users table in your database. You can add other things after your commands like sorting or filtering the output, but the base command structure will look much like this.</p>
+            <h3 id="important-commands">Important Commands</h3>
+                <ul>
+                    <li><strong>SELECT</strong>: Returns data from the table as specified by the query</li>
+                    <li><strong>UPDATE</strong>: Updates data using a specifier as part of the query</li>
+                    <li><strong>DELETE</strong>: Removes records from a database</li>
+                    <li><strong>INSERT INTO</strong>: Inserts new data into a database, as specified by the query</li>
+                    <li><strong>CREATE DATABASE</strong>: Makes a new database</li>
+                    <li><strong>ALTER DATABASE</strong>: Modifies database</li>
+                    <li><strong>CREATE TABLE</strong>: Creates a table</li>
+                    <li><strong>ALTER TABLE</strong>: Modifies a table</li>
+                    <li><strong>DROP TABLE</strong>: Deletes a table</li>
+                </ul>            
+        </div>
+    </div>
+</body>
+</html>
