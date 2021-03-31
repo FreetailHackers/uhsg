@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat');
 
-
 #menu-toggle {
   color: white;
   position: fixed;
@@ -29,6 +28,17 @@
   -moz-transition: all 0.5s ease;
   -o-transition: all 0.5s ease;
   transition: all 0.5s ease;
+}
+
+
+@media(max-width: 400px){
+  #sidebar-wrapper {
+    width: 500px;
+  }
+  #sidebar-wrapper.toggled {
+    width: 500px;
+  }
+
 }
 
 #wrapper.toggled {
@@ -109,7 +119,6 @@
   padding-bottom: 70;
   font-size: 30px;
   text-align: left;
-  /* line-height: 60px; */
   font-family:Verdana, Geneva, Tahoma, sans-serif;
 }
 
@@ -121,41 +130,6 @@
   color: rgb(197, 197, 197);
   background: none;
 }
-
-/* *
-
-@media(min-width:768px) {
-  
-#wrapper {
-    padding-left: 0;
-  }
-  
-#wrapper.toggled {
-    padding-left: 0px;
-  }
-  
-#sidebar-wrapper {
-    width: 250px;
-  }
-  
-#wrapper.toggled 
-#sidebar-wrapper {
-    width: 250px;
-  }
-  
-#page-content-wrapper {
-    padding-left: 50px;
-    position: relative;
-  }
-  
-#wrapper.toggled #page-content-wrapper {
-    position: relative;
-    margin-right: 0;
- padding-left: 35px; }
-
-}
-
-* */
 
 .row {
   margin-right: 0px;
