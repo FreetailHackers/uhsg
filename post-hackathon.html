@@ -1,39 +1,65 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <title>Hacker Guide</title>
-  <meta name="description" content="Freetail's Hacker Guide">
-  <link rel="stylesheet" href="styles.css">
-</head>
-
-<body>
-    <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
-    <script src="scripts.js"></script>
-    <div class="wrapper">
-        <div class="sidebar">
-            <h2>Ultimate Hackathon Guide</h2>
-            <ul>
-                <li><a href="authentication.html"></i>Authentication</a></li>
-                <li><a href="cloud.html"></i>Cloud</a></li>
-                <li><a href="comp-vis.html"></i>Computer Vision</a></li>
-                <li><a href="database.html"></i>Database</a></li>
-                <li><a href="design-ui.html"></i>Design UI</a></li>
-                <li><a href="github.html"></i>Guthub</a></li>
-                <li><a href="hackathon-logistics.html"></i>Hackathon Logistics</a></li>
-                <li><a href="ideation.html"></i>Ideation</a></li>
-                <li><a href="machine-learning.html"></i>Machine Learning</a></li>
-                <li><a href="mobile-apps.html"></i>Mobile App</a></li>
-                <li><a href="post-hackathon.html"></i>Post Hackathon</a></li>
-                <li><a href="submission.html"></i>Submission and pitching</a></li>
-                <li><a href="terminal.html"></i>Terminal</a></li>
-                <li><a href="web-dev.html"></i>Web Development</a></li>
-            </ul> 
+  <head>
+    <meta charset="UTF-8" />
+    <title>Ultimate Hacker Guide</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div id="wrapper">
+      <!-- Sidebar -->
+      <div id="sidebar-wrapper">
+        <ul class="sidebar-nav">
+            <li class="sidebar-brand"><a href="https://freetailhackers.com/#"> Hacker Guide </a></li>
+            <li><a href="index.html"></i>Guide Introduction</a></li>
+            <li><a href="authentication.html"></i>Authentication</a></li>
+          <li><a href="cloud.html"></i>Cloud</a></li>
+          <li><a href="comp-vis.html"></i>Computer Vision</a></li>
+          <li><a href="database.html"></i>Database</a></li>
+          <li><a href="design-ui.html"></i>Design UI</a></li>
+          <li><a href="github.html"></i>Guthub</a></li>
+          <li><a href="hackathon-logistics.html"></i>Hackathon Logistics</a></li>
+          <li><a href="ideation.html"></i>Ideation</a></li>
+          <li><a href="machine-learning.html"></i>Machine Learning</a></li>
+          <li><a href="mobile-apps.html"></i>Mobile Development</a></li>
+          <li><a href="post-hackathon.html"></i>Post Hackathon</a></li>
+          <li><a href="submission.html"></i>Submission and pitching</a></li>
+          <li><a href="terminal.html"></i>Terminal</a></li>
+          <li><a href="web-dev.html"></i>Web Development</a></li>
+        </ul>
+      </div>
+      <!-- Page Content -->
+      <div id="page-content-wrapper">
+        <div class="container-fluid">
+            <h1 id="post-hackathon">Post-Hackathon</h1>
+            <p>Congratulations! You made it through the hackathon and you have a (hopefully) working project! What should you do next? Definitely DO NOT just make your project a history. Here are the steps that you should follow to make your experience worth your effort.</p>
+            <h2 id="post-mortem">1. Post-Mortem</h2>
+            <h3 id="the-positives">The Positives</h3>
+            <p>Make a list of everything that went right in this project so that it can be repeated next time. From the small-scale accomplishments to the large-scale accomplishments, each detail counts and is probably worth noting! This makes it easier next time when you want to add to the project, develop a similar project with more functionalities, or use it as reference in any kind of interview.</p>
+            <h3 id="the-negatives">The Negatives</h3>
+            <p>Yes, with positives must also come a list of everything that went wrong and should be avoided next time. A suggestion is if something during the project did not go as planned, then make note of it and detail the solutions (if there are any) as well as the root of the problem(s).</p>
+            <p>In the future if this project is ever referenced or developed again, the post-mortem will save you plenty of time!</p>
+            <h2 id="cost-benefit-analysis">2. Cost-Benefit Analysis</h2>
+            <p>Evaluate your project overall and create a comparison between the benefits that came from the experience in contrast to the negative experiences. What did you learn from the hackathon, what do you look forward to, and what could have made the experience more worthwile?</p>
+            <p>If you worked on the project with a team, discuss with each other what each one liked and disliked about the event. Additionally, it is important to have an understanding of what is to come of this product, and what the future plans are regarding it.</p>
+            <h2 id="blog-recount-your-experience">3. Blog / Recount your experience</h2>
+            <p>Good work! You know exactly what is to become of your project and what your future plans are regarding its scope! Recount your experience to others, tag the hackathon organizers (we are <span class="citation">@freetailhackers</span>) on your social media, and let us know how they did and/or what they could have improved on! Another option is to write an article talking about your product and its functionalities. A lot of employers like seeing posts like these on sites like LinkedIn, since they demonstrate your ability to build functional products with a team in a stressful situation.</p>
+            <p>If you want to keep a lower profile, you do not need to publish your article. Just writing it is great way to wrap up the hackathon and see how your hard work paid off!</p> 
+          <button id="menu-toggle" class="btn btn-secondary">
+            <i id="toggleIcon" class="fa fa-angle-double-down"></i>
+          </button>
         </div>
-        <div class="main_content">
-            <div class="header">Post Hackathon</div>  
+      </div>
 
-        </div>
+      <!-- /#page-content-wrapper -->
     </div>
-</body>
+
+    
+    <!-- /#wrapper -->
+    <!-- partial -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="./script.js"></script>
+  </body>
 </html>

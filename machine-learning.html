@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Ultimate Hacker Guide</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div id="wrapper">
+      <!-- Sidebar -->
+      <div id="sidebar-wrapper">
+        <ul class="sidebar-nav">
+            <li class="sidebar-brand"><a href="https://freetailhackers.com/#"> Hacker Guide </a></li>
+            <li><a href="index.html"></i>Guide Introduction</a></li>
+            <li><a href="authentication.html"></i>Authentication</a></li>
+          <li><a href="cloud.html"></i>Cloud</a></li>
+          <li><a href="comp-vis.html"></i>Computer Vision</a></li>
+          <li><a href="database.html"></i>Database</a></li>
+          <li><a href="design-ui.html"></i>Design UI</a></li>
+          <li><a href="github.html"></i>Guthub</a></li>
+          <li><a href="hackathon-logistics.html"></i>Hackathon Logistics</a></li>
+          <li><a href="ideation.html"></i>Ideation</a></li>
+          <li><a href="machine-learning.html"></i>Machine Learning</a></li>
+          <li><a href="mobile-apps.html"></i>Mobile Development</a></li>
+          <li><a href="post-hackathon.html"></i>Post Hackathon</a></li>
+          <li><a href="submission.html"></i>Submission and pitching</a></li>
+          <li><a href="terminal.html"></i>Terminal</a></li>
+          <li><a href="web-dev.html"></i>Web Development</a></li>
+        </ul>
+      </div>
+      <!-- Page Content -->
+      <div id="page-content-wrapper">
+        <div class="container-fluid">
+            <h1 id="machine-learning-keras-pytorch-tensorflow">Machine Learning (Keras, PyTorch, Tensorflow)</h1>
+            <h2 id="what-is-machine-learning-and-why-would-i-use-it">What is Machine Learning and Why Would I Use it?</h2>
+            <p>Machine Learning is a means of developing artificial intelligence, which is when a computer performs mathematical and statistical calculations to find patterns in large data sets. This becomes useful when datasets become too large for humans to analyze or patters become too obscure for humans to find.</p>
+            <p>Before proceeding with this guide, check out <a href="https://docs.google.com/presentation/d/1EImakverhNq-WhJwd-WIx2H04ZnCyUxsFk-9UcKoubQ/edit?usp=sharing">this</a> presentation made by Freetail Hackers. It's a quick overview about what AI is and a couple useful subfields within this space.</p>
+            <p>In the context of a Hackathon, Machine Learning is designed to target a single problem with specific input parameters that can then be consistently replicated on a large scale and thus is most commonly used to develop an market solution tailored to a <strong>specific company challenge or a specific social problem.</strong></p>
+            <p>The great thing about Machine Learning is that it is applicable to most modern day problems. This ranges from economics, where ML is being used to developing models to predict stock prices (quantitative analysis, a very lucrative field), to the medical field, where ML is being used to analyze X-Rays to determine if a patient has cancer.</p>
+            <p>ML can be applied to solve a problem faster and more efficiently anywhere we would normally use our intuition to predict a pattern!</p>
+            <h2 id="how-do-i-know-if-i-should-use-machine-learning-in-my-project">How do I know if I should use Machine Learning in my Project?</h2>
+            <p>It is important to keep in mind that ML is not a solution for every problem. Many times, there will be a way to develop a robust solution without needing to use ML. Here are the general questions you should be asking yourself to decide if ML is right for your project:</p>
+            <ol style="list-style-type: decimal">
+                <li><p>Can I hard-code the rules? Many human tasks cannot be solved by using a simple rule-based solution, as there are usually a large number of factors that influence the outcome. A good example is determining if an email is spam or not; it is hard to claim that all spam emails follow a definitive rule. Thus, when the outcome depends on too many factors, Machine Learning should be considered as it is effective at accounting for a large number of factors.</p></li>
+                <li><p>Can I easily scale without ML? Many times, an idea will work at a small scale, but becomes tedious at a large scale. Coming back to the spam email example, while you might be able to click through a hundred emails and sort which ones are spam, doing this for millions of emails would be quite unreasonable. Thus, if scaling your task is tedious, Machine Learning should be considered as it is effective at handling large-scale problems.</p></li>
+            </ol>
+            <p>If the answer to at least one of these questions is &quot;No,&quot; Machine Learning might be the way to go. Some classic examples of such problems where machine learning is being applied today include: natural language processing, facial recognition, and image classification. If any of these sound interesting to you, feel free to go down a Google rabbit-hole and learn about these awesome applications!</p>
+            <h2 id="example-and-projects">Example and Projects</h2>
+            <p>Here are some cool ML hackathon projects as inspiration to get started!</p>
+            <ol style="list-style-type: decimal">
+                <li><p><a href="https://devpost.com/software/navassistai">NavAssistAI</a> - This project won the Tensorflow World 2.0 Challenge, and attempts to help visually impaired individuals cross the street using machine learning. I like this project because its very applicable and usable in real life.</p></li>
+                <li><p><a href="https://devpost.com/software/coughvid-ai-based-app-for-covid-19-screening-using-coughing">Coughvid</a> - This project placed 3rd at LauzHack for COVID. It uses ML to analyze coughing sounds and symptoms to predict if a patient has COVID-19.</p></li>
+                <li><p><a href="https://devpost.com/software/colorme-50fz68">ColorMe</a> - A unique project which uses Image Analysis to predict what color palettes for clothing would look best on the user.</p></li>
+                <li><p><a href="https://devpost.com/software/gazepay">GazePay</a> - A project from nwHacks 2018 that uses neural networks for facial recognition to make paying easier.</p></li>
+            </ol>
+            <p>There are a lot more! Browse <a href="https://devpost.com">devpost</a> to see more cool projects.</p>
+            <h2 id="tools-and-libraries-to-get-you-started">Tools and libraries to get you started</h2>
+            <p>If you're gonna do any kind of ML project, I'd highly recommend Python. Many common Python ML libraries such as Keras, PyTorch, and Tensorflow abstract a lot of the process (math) for you so that you can focus on the bigger picture! This is especially good for beginners who may not understand everything that is going on behind the scenes just yet. C++ and Java are also pretty popular options, but I can't speak to their usability.</p>
+            <p>Keras, PyTorch, and Tensorflow have a whole bunch of documentation out there for how to set them up, and how to use them. I'll link a couple python tutorials I found really useful down below. The best part about this library is that it works right out of the box (for the most part), allowing you to quickly move right on integrating it with the rest of the project.</p>
+            <p>You will most likely have to look into these frameworks to decide which one is the right fit for your project, but here are some general differences as a starting point:</p>
+            <p><a href="https://keras.io/">Keras</a> (Recommended for beginners and small datasets): - High level API (Abstracts things more) - Slower runtimes(Shouldn't matter too much in this context) - Simplest to use - Least lines of code needed - Less accurate models - Simple models with minial debugging</p>
+            <p><a href="https://www.tensorflow.org/">Tensorflow</a> (Recommended for experienced users who need high performance models despite smaller datasets): - High and Low level API's - Faster runtimes - Harder to use - Reduced code needed - Accurate models - Hard to debug</p>
+            <p><a href="https://pytorch.org/">PyTorch</a> (Recommended for machine learning gods who need high performance models and have large datasets): - Low Level API - Faster runtimes - Hardest to use - Most lines of code needed - Extremely accurate models - Good debugging support</p>
+            <h2 id="pros-and-cons">Pros and Cons</h2>
+            <p>While ML is indeed very flashy, it also has some not-so-flashy aspects, which I will cover so you can consider if incorporating ML into your project is a good fit</p>
+            <p>Pros: - Very relevant in the field of software development - Very flashy - Very powerful libraries - Generally beginner friendly - Applicable to many projects</p>
+            <p>Cons: - Long installation (You'll probably spend more time installing dependancies and libraries than actually working on your project) - Needs large dataset (Machine Learning generally needs extremely large datasets to be accurate. In most cases, I have found myself without enough resources or enough time to create a custom dataset. It is also usually disappointing when your model doesn't correctly predict the category in front of the judges) - Reading thick documentation (Because of how powerful these libraries are, you will need to take some time to figure out which tools are the ones you need and which ones you don't)</p>
+            <h2 id="takeaways">Takeaways</h2>
+            <p>Machine Learning is a really useful tool for many hackathon projects if used effectively.</p>
+            <h2 id="resources-i-promised-to-link">Resources I promised to link</h2>
+            <ol style="list-style-type: decimal">
+                <li><a href="https://www.tensorflow.org/tutorials">Official Tensorflow and Keras tutorial</a></li>
+                <li><a href="https://medium.com/@cyrilivargarcia/tensorflow-and-keras-a-beginners-tutorial-by-a-beginner-abd4c90f814f">Keras Walkthrough</a></li>
+                <li><a href="https://medium.com/towards-artificial-intelligence/the-50-best-public-datasets-for-machine-learning-d80e9f030279">Public Datasets</a></li>
+            </ol>
+            <p>These sites are just a starting point - there is no substitute for getting your hands messy quickly. Fire up a venv or conda env (see note below) and get started!</p>
+            <h3 id="where-should-i-code-this">Where should I code this?</h3>
+            <p>When you're working on a large python project, you often have multiple dependencies (modules that your code needs to run). These dependencies may conflict with other programs on your computer, forcing you to spend time debugging. Venv (python's virtual environment library) and anaconda (data science python based platform) environments help take the stress out of handling your dependencies. A virtual environment has its own version of python, pip (pythons default package manager) and all modules that you installed. This ensures that your versions don't conflict with each other. In an ideal world, if all your team members have an identical virtual environment set up, then there should be no differences between running the code.</p>
+            <p>You can use either conda environments, or virtual environments. Conda is more stable, so preferred for larger projects. However, virtualenv is typically easier to get set up (in my experience). I'll link resources to installing and running both below.</p>
+            <h4 id="virtualenv">Virtualenv</h4>
+            <p><a href="https://www.pythonforbeginners.com/basics/how-to-use-python-virtualenv">virtualenv tutorial</a> - just follow the instructions on your terminal <a href="https://virtualenv.pypa.io/en/latest/">official python docs</a></p>
+            <h4 id="anaconda">Anaconda</h4>
+            <p><a href="https://docs.conda.io/projects/conda/en/latest/user-guide/install/">installing conda</a> - installing miniconda works too, especially if you don't need all the features</p>
+            <p><a href="https://stackoverflow.com/questions/45421163/anaconda-vs-miniconda">conda</a>, but I'd recommend insalling the full anaconda package to make your life easier.</p>
+            <p><a href="https://uoa-eresearch.github.io/eresearch-cookbook/recipe/2014/11/20/conda/">setting up conda env</a></p>
+
+
+            
+          <button id="menu-toggle" class="btn btn-secondary">
+            <i id="toggleIcon" class="fa fa-angle-double-down"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- /#page-content-wrapper -->
+    </div>
+
+    
+    <!-- /#wrapper -->
+    <!-- partial -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="./script.js"></script>
+  </body>
+</html>

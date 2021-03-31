@@ -1,37 +1,40 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <title>Hacker Guide</title>
-  <meta name="description" content="Freetail's Hacker Guide">
-  <link rel="stylesheet" href="styles.css">
-</head>
-
-<body>
-    <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
-    <script src="scripts.js"></script>
-    <div class="wrapper">
-        <div class="sidebar">
-            <h2>Ultimate Hackathon Guide</h2>
-            <ul>
-                <li><a href="authentication.html"></i>Authentication</a></li>
-                <li><a href="cloud.html"></i>Cloud</a></li>
-                <li><a href="comp-vis.html"></i>Computer Vision</a></li>
-                <li><a href="database.html"></i>Database</a></li>
-                <li><a href="design-ui.html"></i>Design UI</a></li>
-                <li><a href="github.html"></i>Guthub</a></li>
-                <li><a href="hackathon-logistics.html"></i>Hackathon Logistics</a></li>
-                <li><a href="ideation.html"></i>Ideation</a></li>
-                <li><a href="machine-learning.html"></i>Machine Learning</a></li>
-                <li><a href="mobile-apps.html"></i>Mobile App</a></li>
-                <li><a href="post-hackathon.html"></i>Post Hackathon</a></li>
-                <li><a href="submission.html"></i>Submission and pitching</a></li>
-                <li><a href="terminal.html"></i>Terminal</a></li>
-                <li><a href="web-dev.html"></i>Web Development</a></li>
-            </ul> 
-        </div>
-        <div class="main_content">
-            <h2 id="what-is-cloud">What is Cloud?</h2>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Ultimate Hacker Guide</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div id="wrapper">
+      <!-- Sidebar -->
+      <div id="sidebar-wrapper">
+        <ul class="sidebar-nav">
+            <li class="sidebar-brand"><a href="https://freetailhackers.com/#"> Hacker Guide </a></li>
+            <li><a href="index.html"></i>Guide Introduction</a></li>
+            <li><a href="authentication.html"></i>Authentication</a></li>
+          <li><a href="cloud.html"></i>Cloud</a></li>
+          <li><a href="comp-vis.html"></i>Computer Vision</a></li>
+          <li><a href="database.html"></i>Database</a></li>
+          <li><a href="design-ui.html"></i>Design UI</a></li>
+          <li><a href="github.html"></i>Guthub</a></li>
+          <li><a href="hackathon-logistics.html"></i>Hackathon Logistics</a></li>
+          <li><a href="ideation.html"></i>Ideation</a></li>
+          <li><a href="machine-learning.html"></i>Machine Learning</a></li>
+          <li><a href="mobile-apps.html"></i>Mobile Development</a></li>
+          <li><a href="post-hackathon.html"></i>Post Hackathon</a></li>
+          <li><a href="submission.html"></i>Submission and pitching</a></li>
+          <li><a href="terminal.html"></i>Terminal</a></li>
+          <li><a href="web-dev.html"></i>Web Development</a></li>
+        </ul>
+      </div>
+      <!-- Page Content -->
+      <div id="page-content-wrapper">
+        <div class="container-fluid">
+          <h1>Cloud Computing</h1>
+          <h2 id="what-is-cloud">What is Cloud?</h2>
                 <p>Cloud services are a way for us to obtain compute, storage, machine learning, and other functionality by offloading the work onto computers somewhere else, usually at some sort of large server farm. It basically means you can pay a little bit of money to get a small computer or database, which you can use for a specific task. The three big cloud providers are:</p>
                 <ul>
                     <li><a href="https://aws.amazon.com/">Amazon Web Services (AWS)</a></li>
@@ -60,7 +63,20 @@
             <p><a href="https://aws.amazon.com/elasticbeanstalk/">Elastic Beanstalk</a> is a service that does basically the same thing as EC2, except it's meant to be a package deal. Instead of manually creating the instance, installing dependencies, running your app, figuring out security/access, and going through all of that hassle, you can simply place your code in a ZIP file and submit it to Elastic Beanstalk. It will take care of creating and configuring the instance for you, and when you want to update your code, all you need to do is upload a new ZIP file formatted the exact same way. It will also provide you with a URL you can use to access your application through the web, and it works with all sorts of popular web frameworks like Flask and Java Spring Boot. This <a href="https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/tutorials.html">tutorials</a> link is very helpful for figuring out how to format your files! Example ZIP files for Python, Java, and Node.js (the most common stacks) are available in this repository folder as well.</p>
             <h3 id="route-53">Route 53</h3>
             <p>When you've finally created your website, you're probably wondering how you can get a custom URL instead of the long one that AWS provides by default. <a href="https://aws.amazon.com/route53/">Route 53</a> is the main service to help with that. When you enter this service, you'll need to create a <strong>hosted zone</strong> associated with the domain name you've bought, no matter where you bought it from. AWS will then provide you with some name servers, which you'll need to give to your domain name provider, like GoDaddy or Domain.com. Once you've got this set up, you can go back to the hosted zone screen for your domain and create records. Click <strong>Create Record Set -&gt; Alias (Yes) -&gt; Alias Target</strong> and set the target to whichever S3 or Elastic Beanstalk endpoint you've created. Save the record and wait a few minutes, and you should be able to type in your custom URL to get to your application!</p>
+
+          <button id="menu-toggle" class="btn btn-secondary">
+            <i id="toggleIcon" class="fa fa-angle-double-down"></i>
+          </button>
         </div>
+      </div>
+
+      <!-- /#page-content-wrapper -->
     </div>
-</body>
+
+    
+    <!-- /#wrapper -->
+    <!-- partial -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="./script.js"></script>
+  </body>
 </html>

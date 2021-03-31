@@ -1,52 +1,66 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <title>Hacker Guide</title>
-  <meta name="description" content="Freetail's Hacker Guide">
-  <link rel="stylesheet" href="styles.css">
-</head>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Ultimate Hacker Guide</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div id="wrapper">
+      <!-- Sidebar -->
+      <div id="sidebar-wrapper">
+        <ul class="sidebar-nav">
+            <li class="sidebar-brand"><a href="https://freetailhackers.com/#"> Hacker Guide </a></li>
+            <li><a href="index.html"></i>Guide Introduction</a></li>
+            <li><a href="authentication.html"></i>Authentication</a></li>
+          <li><a href="cloud.html"></i>Cloud</a></li>
+          <li><a href="comp-vis.html"></i>Computer Vision</a></li>
+          <li><a href="database.html"></i>Database</a></li>
+          <li><a href="design-ui.html"></i>Design UI</a></li>
+          <li><a href="github.html"></i>Guthub</a></li>
+          <li><a href="hackathon-logistics.html"></i>Hackathon Logistics</a></li>
+          <li><a href="ideation.html"></i>Ideation</a></li>
+          <li><a href="machine-learning.html"></i>Machine Learning</a></li>
+          <li><a href="mobile-apps.html"></i>Mobile Development</a></li>
+          <li><a href="post-hackathon.html"></i>Post Hackathon</a></li>
+          <li><a href="submission.html"></i>Submission and pitching</a></li>
+          <li><a href="terminal.html"></i>Terminal</a></li>
+          <li><a href="web-dev.html"></i>Web Development</a></li>
+        </ul>
+      </div>
+      <!-- Page Content -->
+      <div id="page-content-wrapper">
+        <div class="container-fluid">
+            <h1>Authentication</h1>
+            <h2 id="introduction">Introduction</h2>
+            <p>This tutorial will introduce the basics of authentication, implemented for both websites and mobile applications. The code and ideas presented here <strong>should only be used in a hackathon environment</strong>. In a production environment, most of the tatics listed here would not be secure enough, and may leave ways for determined hackers to access sensitive information. The code here utilizes mostly Javascript and MongoDB.</p>
+        <h2 id="basics">Basics</h2>
+            <p>Authentication is the process of verifying the identity of users to protect their data. The code presented here is used to create users, validate them (log in), access secure data, and log them out. Authentication should only be added in cases where there are unique users each with their own, sensitive data or access to sensitive data. For instance, suppose we had a website where some sort of administrator panel was necessary (like a hackathon registration website). In this case, we would use authentication to ensure that a user trying to access administrator function is actually an administrator. An example where authentication is not necessary is storing the high scores in a simple game (ex. Tetris). Since none of the users are storing sensitive data nor able to access sensitive data, authentication may not be necessary in this case.</p>
+            <p>Both systems of authentification utilize the same system to register users. However, the implementation of login/logout will differ between platforms.</p>
+            <p>Registering users is a relatively simple process, mostly involving collecting all of the users data in some sort of form then inserting all of this data into the database. However, there is one main issues: storing passwords. Prior to storing the passwords, it is important to salt and hash them for the safety of the users. <code>bcrypt</code> should take care of this process.</p>
+            <p>As for logging in and logging out users, this process is slightly more involved. Another form will be used here, with one field for a username (this can be an actual username, an email, an id, etc.) and one for a password. This time, after receiving a request, the server will do two things. Firstly, the server will determine whether a user exists given the username. Afterward, the server will compare the hashed versions of the submitted password and the one stored in the database. However, what happens after will be platform dependent.</p>
+        <h2 id="website-specific-authentication">Website Specific Authentication</h2>
+            <p>For authentication with websites, we will rely on using node.js sessions (cookies). These sessions are necessary to ensure that after a user is logged in, the user &quot;stays logged in.&quot; After verifying a user trying to log in, the next step is to save some unique field of the user to the session. In our case, we will use MongoDB's &quot;_id&quot; field. After storing this data, we will rely on express.js middleware to constantly fetch and update the user information while the user is logged in. Any routes that may require authentification will utilize middleware in order to ensure that a user is logged in prior to accessing those routes. Upon logging out of a website, we will destroy the session.</p>
+        <h2 id="mobile-specific-authentication">Mobile Specific Authentication</h2>
+            <p>Mobile authentification adds a twist. On mobile, node.js sessions will not work, thus we will rely on JWT (JSON Web Token) to facilitate authentification. This token will be physically stored on the device (ex. <code>async-storage</code> for React Native), and will be sent to the server when any routes involving user sensitive information. Upon validation of this token, the server will then be able to return user sensitive data. Thus, it is important to treat authentification tokens as if there were passwords, as they essentially follow the same function.</p>
 
-<body>
-    <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
-    <script src="scripts.js"></script>
-    <div class="wrapper">
-        <div class="sidebar">
-            <h2>Ultimate Hackathon Guide</h2>
-            <ul>
-                <li><a href="authentication.html"></i>Authentication</a></li>
-                <li><a href="cloud.html"></i>Cloud</a></li>
-                <li><a href="comp-vis.html"></i>Computer Vision</a></li>
-                <li><a href="database.html"></i>Database</a></li>
-                <li><a href="design-ui.html"></i>Design UI</a></li>
-                <li><a href="github.html"></i>Guthub</a></li>
-                <li><a href="hackathon-logistics.html"></i>Hackathon Logistics</a></li>
-                <li><a href="ideation.html"></i>Ideation</a></li>
-                <li><a href="machine-learning.html"></i>Machine Learning</a></li>
-                <li><a href="mobile-apps.html"></i>Mobile App</a></li>
-                <li><a href="post-hackathon.html"></i>Post Hackathon</a></li>
-                <li><a href="submission.html"></i>Submission and pitching</a></li>
-                <li><a href="terminal.html"></i>Terminal</a></li>
-                <li><a href="web-dev.html"></i>Web Development</a></li>
-            </ul> 
-        </div>
-        <div class="main_content">
-            <div class="header">Authentication</div>  
-            <div class="info">
-                <h2 id="introduction">Introduction</h2>
-                    <p>This tutorial will introduce the basics of authentication, implemented for both websites and mobile applications. The code and ideas presented here <strong>should only be used in a hackathon environment</strong>. In a production environment, most of the tatics listed here would not be secure enough, and may leave ways for determined hackers to access sensitive information. The code here utilizes mostly Javascript and MongoDB.</p>
-                <h2 id="basics">Basics</h2>
-                    <p>Authentication is the process of verifying the identity of users to protect their data. The code presented here is used to create users, validate them (log in), access secure data, and log them out. Authentication should only be added in cases where there are unique users each with their own, sensitive data or access to sensitive data. For instance, suppose we had a website where some sort of administrator panel was necessary (like a hackathon registration website). In this case, we would use authentication to ensure that a user trying to access administrator function is actually an administrator. An example where authentication is not necessary is storing the high scores in a simple game (ex. Tetris). Since none of the users are storing sensitive data nor able to access sensitive data, authentication may not be necessary in this case.</p>
-                    <p>Both systems of authentification utilize the same system to register users. However, the implementation of login/logout will differ between platforms.</p>
-                    <p>Registering users is a relatively simple process, mostly involving collecting all of the users data in some sort of form then inserting all of this data into the database. However, there is one main issues: storing passwords. Prior to storing the passwords, it is important to salt and hash them for the safety of the users. <code>bcrypt</code> should take care of this process.</p>
-                    <p>As for logging in and logging out users, this process is slightly more involved. Another form will be used here, with one field for a username (this can be an actual username, an email, an id, etc.) and one for a password. This time, after receiving a request, the server will do two things. Firstly, the server will determine whether a user exists given the username. Afterward, the server will compare the hashed versions of the submitted password and the one stored in the database. However, what happens after will be platform dependent.</p>
-                <h2 id="website-specific-authentication">Website Specific Authentication</h2>
-                    <p>For authentication with websites, we will rely on using node.js sessions (cookies). These sessions are necessary to ensure that after a user is logged in, the user &quot;stays logged in.&quot; After verifying a user trying to log in, the next step is to save some unique field of the user to the session. In our case, we will use MongoDB's &quot;_id&quot; field. After storing this data, we will rely on express.js middleware to constantly fetch and update the user information while the user is logged in. Any routes that may require authentification will utilize middleware in order to ensure that a user is logged in prior to accessing those routes. Upon logging out of a website, we will destroy the session.</p>
-                <h2 id="mobile-specific-authentication">Mobile Specific Authentication</h2>
-                    <p>Mobile authentification adds a twist. On mobile, node.js sessions will not work, thus we will rely on JWT (JSON Web Token) to facilitate authentification. This token will be physically stored on the device (ex. <code>async-storage</code> for React Native), and will be sent to the server when any routes involving user sensitive information. Upon validation of this token, the server will then be able to return user sensitive data. Thus, it is important to treat authentification tokens as if there were passwords, as they essentially follow the same function.</p>
 
-          </div>
+
+          <button id="menu-toggle" class="btn btn-secondary">
+            <i id="toggleIcon" class="fa fa-angle-double-down"></i>
+          </button>
         </div>
+      </div>
+
+      <!-- /#page-content-wrapper -->
     </div>
-</body>
+
+    
+    <!-- /#wrapper -->
+    <!-- partial -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="./script.js"></script>
+  </body>
 </html>
