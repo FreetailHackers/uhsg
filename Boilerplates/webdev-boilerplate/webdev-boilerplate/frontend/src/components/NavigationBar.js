@@ -5,10 +5,10 @@ import {
   Route,
   Link
 } from "react-router-dom";
-import PokemonSearch from '../PokemonSearch/PokemonSearch';
-import Home from '../Home/Home';
+import PokemonSearch from './PokemonSearch';
+import Home from './Home';
 import { Navbar, Nav, Form, FormControl, Button } from 'react-bootstrap';
-import Pokemon from '../Pokemon/Pokemon';
+import Pokemon from './Pokemon';
 
 function NavigationBar() {
 

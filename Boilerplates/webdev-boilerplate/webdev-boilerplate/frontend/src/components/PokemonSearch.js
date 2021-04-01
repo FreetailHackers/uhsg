@@ -1,7 +1,7 @@
 import React from 'react';
 import { useState, useEffect } from "react";
 import { InputGroup, Button, FormControl } from 'react-bootstrap';
-import Pokemon from '../Pokemon/Pokemon';
+import Pokemon from './Pokemon';
 
 
 function PokemonSearch() {
@@ -21,6 +21,24 @@ function PokemonSearch() {
         setPokemonName(event.target.value.toLowerCase())
     }
 
+    const formatOutput =  () => {
+            const info =  Pokemon(pokemonName);
+            const abilities = info.abilities;
+            const height = info.height
+            const moves = info.moves
+            console.log(info)
+            console.log(abilities)
+            console.log(height)
+            console.log(moves)
+
+            // return (
+            //     <div>
+            //         {`Ability 1: ${abilities[0].ability.name}`}
+                    
+            //     </div>
+            // )
+    }
+
     return (
         <InputGroup className="mb-3">
             <FormControl
@@ -30,8 +48,9 @@ function PokemonSearch() {
             <InputGroup.Append>
             <Button variant="outline-secondary" onClick={handleSubmit}>Submit</Button>
             </InputGroup.Append>
-            {Pokemon(pokemonName)}
+            {formatOutput}
         </InputGroup>
+        
     );
 }
 

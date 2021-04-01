@@ -18,12 +18,12 @@ function Pokemon({ name }) {
                 console.error(error)
             }
         };
+        console.log("Here")
         getPokemon();
+        return pokemon
     },[name]);
-
-    return (
-        pokemon.abilities != undefined ?  <div>{pokemon.abilities[0].name}</div> : null
-    );
+    
+    
 }
 
 export default Pokemon;
