@@ -47,7 +47,7 @@
             <h2 id="mobile-specific-authentication">Mobile Specific Authentication</h2>
             <p>Mobile authentification adds a twist. On mobile, node.js sessions will not work, thus we will rely on JWT (JSON Web Token) to facilitate authentification. This token will be physically stored on the device (ex. <code>async-storage</code> for React Native), and will be sent to the server when any routes involving user sensitive information. Upon validation of this token, the server will then be able to return user sensitive data. Thus, it is important to treat authentification tokens as if there were passwords, as they essentially follow the same function.</p>
             <h3>How can I get started</h3>
-            <p>We have provided some code to use as a template <a href="https://github.com/FreetailHackers/uhsg/tree/master/mobile-dev-boilerplate">here</a>.</p>   
+            <p>We have provided some code to use as a template <a href="https://github.com/FreetailHackers/uhsg/tree/master/auth%20examples">here</a>.</p>   
 
 
           <button id="menu-toggle" class="btn btn-secondary">
